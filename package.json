@@ -1,0 +1,26 @@
+{
+  "name": "capstone_bank_webapp",
+  "version": "1.0.0",
+  "description": "Kaggle dataset imagined web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bank",
+    "IA",
+    "ML",
+    "binaryclassifier",
+    "Datascience"
+  ],
+  "author": "Alec Garcia Barba",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^2.3.0",
+    "@tensorflow/tfjs-node": "^1.7.4",
+    "@tensorflow/tfjs-node-gpu": "^2.3.0",
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  }
+}

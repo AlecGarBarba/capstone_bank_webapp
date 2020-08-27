@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+
+</head>
+<body>
+  <div class="testbox">
+      
+    <form    method ="post">
+      <div class="banner" >
+        <img class="banner" src="./img/background.jpg" >
+        <h1 style="position: absolute; bottom: 0 ">Capstone Project Bank </h1>
+      </div>
+      <br/>
+      <p>
+        Thank you for your preference in the Capstone Project Bank . 
+        To apply for a House Loan, please provide the following information.
+      </p>
+      <br/>
+      <hr style="width:100%;;margin-left:0 " size ="1" noshade>
+      <div class="colums">
+        <div class="item">
+          <label for="fname"> First Name<span>*</span></label>
+          <input id="fname" type="text" name="fname" required/>
+        </div>
+        <div class="item">
+          <label for="lname"> Last Name<span>*</span></label>
+          <input id="lname" type="text" name="lname" required/>
+        </div>
+        
+        <div class="item">
+          <label for="eaddress">Email Address<span>*</span></label>
+          <input id="eaddress" type="text"   name="eaddress" required/>
+        </div>
+        <div class="item">
+          <label for="phone">Phone number<span>*</span></label>
+          <input id="phone" type="tel"   name="phone" required/>
+        </div>
+        <div class="item">
+          <label for="address1">Address <span>*</span></label>
+          <input id="address1" type="text"   name="address1" required/>
+        </div>
+        
+        <div class="item">
+          <label for="city">City<span>*</span></label>
+          <input id="city" type="text"   name="city" required/>
+        </div>
+        <div class="item">
+          <label for="state">State<span>*</span></label>
+          <input id="state" type="text"   name="state" required/>
+        </div>
+        <div class="item">
+          <label for="code">Postal Code<span>*</span></label>
+          <input id="code" type="text"   name="code" required/>
+        </div>
+        
+        
+        <div><br></div><div><br></div>
+
+        <div>
+          <label class= "item" for="male">Gender<span>*</span></label>
+        </div>
+
+        <div class="question" >
+          <div>
+            <input type="radio" value="1" id="male" name="gender"/>
+            <label for="male" class="radio" required><span>Male</span></label>
+          </div>
+  
+          <input  type="radio" value="0" id="female" name="gender"/>
+          <label for="female" class="radio"><span>Female</span></label>
+          
+        </div>
+
+        <div><br></div><div><br></div>
+
+
+        <div>
+          <label class= "item" for="zone">Property zone type<span>*</span></label>
+        </div>
+
+        <div class="question">
+          <select id ="zone" name= "zone" required>
+            <option value="urban">Urban</option>
+            <option value="semiurban">SemiUrban</option>
+            <option value="rural">Rural</option>
+            
+        </select>
+  
+          
+        </div> 
+
+        <div><br></div><div><br></div>
+        
+        <div>
+          <label class= "item" for="male">Marital status<span>*</span></label>
+        </div>
+
+        <div class="question" >
+          <div>
+            <input type="radio" value="1" id="married" name="married"/>
+            <label for="married" class="radio" required><span>Married</span></label>
+          </div>
+  
+          <input  type="radio" value="0" id="single" name="married"/>
+          <label for="single" class="radio"><span>Single</span></label>
+          
+        </div>
+
+        <div><br></div><div><br></div>
+      
+      <div>
+        <label class= "item" for="dependents">Number of dependents<span>*</span></label>
+      </div>
+
+      <div class="question">
+        <select id ="dependents" name ="dependents">
+          <option value="0">Zero</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three or more</option>
+      </select>
+
+        
+      </div> 
+
+
+      <div><br></div><div><br></div>
+
+      <div>
+        <label class= "item" for="education">Do you currently posses a university degree?<span>*</span></label>
+      </div>
+
+
+      <div class="question" >
+        <div>
+          <input type="radio" value="1" id="grad" name="education"/>
+          <label for="grad" class="radio" required><span>Yes</span></label>
+        </div>
+
+        <input  type="radio" value="0" id="nongrad" name="education"/>
+        <label for="nongrad" class="radio"><span>No</span></label>
+        
+      </div>
+
+
+      <div><br></div><div><br></div>
+
+
+      <div>
+        <label class= "item" for="education">Do you work for a company, or are you currently self-employed?<span>*</span></label>
+      </div>
+
+
+      <div class="question" >
+        <input  type="radio" value="0" id="no_self" name="employed"/>
+        <label for="no_self" class="radio"><span>Employee</span></label>
+        <div>
+          <input type="radio" value="1" id="self" name="employed"/>
+          <label for="self" class="radio" required><span>Self employed</span></label>
+        </div>
+
+        
+        
+      </div>
+
+
+      <div><br></div><div><br></div>
+
+      
+      <div>
+        <label class= "item" for="income">Applicant monthly Income Amount<span>*</span></label>
+
+      </div>
+
+      <div>
+        <input id="income" type="text"   name="income" required/>
+      </div>
+
+      <div><br></div><div><br></div>
+
+      <div>
+        <label class= "item" for="coapplicant">Will there be a Co-applicant? <span>*</span></label>
+      </div>
+
+      <div class="question" >
+        <div>
+          <input type="radio" value="Yes" id="coapp_yes" name="coapp"/>
+          <label for="coapp_yes" class="radio" required><span>Yes</span></label>
+        </div>
+
+        <input  type="radio" value="No" id="coapp_no" name="coapp"/>
+        <label for="coapp_no" class="radio"><span>no</span></label>
+        
+      </div>
+      
+      <div><br></div><div><br></div>
+      
+
+      <div>
+        <label  id="co_income_lbl"  class= "item" >Co-applicant Income Amount <span>*</span></label>
+
+      </div>
+      <div>
+        
+      <input id="co_income" placeholder="$0" value = "0" id="coincome" type="text"   name="coincome" required/>
+      </div>
+
+      <div><br></div><div></div>
+
+
+      <div>
+        <label class= "item" for="LoanAmount">Loan Amount  [min: 9,000,   max: 700,000]<span>*</span></label>
+
+      </div>
+
+      <div >
+        
+        <input id="loanAmount" type="text"   name="LoanAmount" required/>
+      </div>
+
+      <div><br></div><div></div>
+
+      <div>
+        <label class= "item" for="term">Loan Amount Term [days]<span>*</span></label>
+      </div>
+
+      
+
+      <div class="question"  required>
+        <select id ="terms" name ="term">
+          <option value="12">12</option>
+          <option value="36">36</option>
+          <option value="60">60</option>
+          <option value="84">84</option>
+          <option value="120">120</option>
+          <option value="180">180</option>
+          <option value="240">240</option>
+          <option value="300">300</option>
+          <option value="360">360</option>
+          <option value="480">480</option>
+
+      </select>
+
+        
+      </div> 
+
+
+
+      <div><br></div><div><br></div>
+
+
+
+      <div>
+        <label class= "item" for="credit">Do you currently have credit history? <span>*</span></label>
+      </div>
+
+      <div class="question" >
+        <div>
+          <input type="radio" value=1 id="credit_yes" name="credit"/>
+          <label for="credit_yes" class="radio" required><span>Yes</span></label>
+        </div>
+
+        <input  type="radio" value=0 id="credit_no" name="credit"/>
+        <label for="credit_no" class="radio"><span>no</span></label>
+        
+      </div>
+
+      <div><br></div><div><br></div>
+      
+        <!--//	 	Credit_History-->
+      
+
+
+      </div> <!-- column div, perhaps-->
+
+    </div> <!-- textbox div-->
+
+      
+      <div class="item">
+        <label for="visit">Additional considerations</label>
+        <textarea id="visit" rows="2"></textarea>
+      </div>
+
+      
+      <div class="btn-block">
+        <button type="submit" >Submit</button>
+        
+      </div>
+    </form>
+  </div>
+
+  <script>
+
+
+  $(document).ready(function(){
+
+    $("#co_income, #co_income_lbl").hide();
+
+    $("#coapp_yes").change(function(){
+      $("#co_income, #co_income_lbl").slideDown('fast');
+    });
+
+    $("#coapp_no").change(function(){
+      $("#co_income, #co_income_lbl").slideUp('fast');
+    });
+
+  
+  });
+
+  </script>
+  
+
+</body>
+</html>
